@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Music Gallery</string>
+    <string name="title_rock">Rock</string>
+    <string name="title_classic">Classical</string>
+    <string name="title_pop">Pop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="music_details_btn">Visit Website</string>
+    <string name="music_preview_btn_pause">preview_pause</string>
+    <string name="music_preview_btn_play">preview_start</string>
+    <string name="music_preview_label">(Preview)</string>
+    <string name="music_artwork">Artwork of the track</string>
+    <string name="no_connection_error">Failed to connect. Music preview won\'t be available.</string>
+    <string name="unknown_error">There is an unknown error loading the list</string>
+    <string name="no_music_error">Hmm... Your device doesn\'t have a list stored. Load them when you\'re online next time.</string>
+</resources>

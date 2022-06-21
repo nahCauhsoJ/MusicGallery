@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/entry_fragment">
+
+    <fragment android:id="@+id/entry_fragment"
+        android:name="com.example.musicgallery.view.BlankFragment"
+        android:label=""
+        tools:layout="@layout/fragment_blank"/>
+
+    <fragment
+        android:id="@+id/navigation_rock"
+        android:name="com.example.musicgallery.view.MusicListFragment"
+        android:label="@string/title_rock"
+        tools:layout="@layout/fragment_music_list">
+        <argument android:name="music_type"
+            app:argType="string"
+            android:defaultValue="rock"/>
+        <action android:id="@+id/navigate_RockToClassic"
+            app:destination="@id/navigation_classic"/>
+        <action android:id="@+id/navigate_RockToPop"
+            app:destination="@id/navigation_pop"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_classic"
+        android:name="com.example.musicgallery.view.MusicListFragment"
+        android:label="@string/title_classic"
+        tools:layout="@layout/fragment_music_list">
+        <argument android:name="music_type"
+            app:argType="string"
+            android:defaultValue="classical"/>
+        <action android:id="@+id/navigate_ClassicToRock"
+            app:destination="@id/navigation_rock"/>
+        <action android:id="@+id/navigate_ClassicToPop"
+            app:destination="@id/navigation_pop"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_pop"
+        android:name="com.example.musicgallery.view.MusicListFragment"
+        android:label="@string/title_pop"
+        tools:layout="@layout/fragment_music_list">
+        <argument android:name="music_type"
+            app:argType="string"
+            android:defaultValue="pop"/>
+        <action android:id="@+id/navigate_PopToClassic"
+            app:destination="@id/navigation_classic"/>
+        <action android:id="@+id/navigate_PopToRock"
+            app:destination="@id/navigation_rock"/>
+    </fragment>
+</navigation>
