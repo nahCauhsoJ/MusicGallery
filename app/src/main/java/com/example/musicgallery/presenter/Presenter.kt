@@ -87,7 +87,9 @@ class Presenter @Inject constructor(
             }.run { return@run }
         } else this.start()
     }.run {return true}
+
     override fun pauseMusic() { if (isPreviewPrepared) mediaPlayer.pause() }
+
     override fun endMusic() = mediaPlayer.reset().also {
         isPreviewPrepared = false
         currentPreviewUrl = ""
@@ -97,6 +99,7 @@ class Presenter @Inject constructor(
     }
 
     override fun isMusicPrepared(): Boolean = isPreviewPrepared
+
     override fun setMusicProgress(progress: Int) = mediaPlayer.seekTo(progress * 1000)
 
     private fun getDataOffline(music_type: String) {
